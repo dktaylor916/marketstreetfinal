@@ -36,7 +36,7 @@ var config = {
         {
             id: 'other-identifier',
             title: 'Second Title',
-            image:  "images/birdseye.jpg",
+            image:  'images/birdseye.jpg',
             description: 'Copy these sections to add to your story.',
             location: {
                 center: [-122.41641, 37.77744],
