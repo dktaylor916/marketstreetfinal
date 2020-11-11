@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "market",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "id": null }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -13629432.774553140625358, 4545938.248596156947315 ], [ -13624879.964653389528394, 4550468.251683637499809 ] ] ] } }
+]
+}
