@@ -1,5 +1,5 @@
 var config = {
-    style: 'mapbox://styles/dtaylorgoud/ckhen3orb06wf19myj2atoo0j',
+    style: 'mapbox://styles/dtaylorgoud/ckhex36sj13us19pexzq4v2h3',
     accessToken: 'pk.eyJ1IjoiZHRheWxvcmdvdWQiLCJhIjoiY2tlbzA1OHltMjJyNjMwcGM2eHZsMGowaiJ9.jtxQ1bgoZL9_sacqiAlTsg',
     showMarkers: false,
     theme: 'light',
@@ -21,10 +21,10 @@ var config = {
                 bearing: 0.00
             },
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1
-                // }
+                {
+                   layer: 'marketstreet',
+                   opacity: 1
+                }
             ],
             onChapterExit: [
                 // {
@@ -66,10 +66,10 @@ var config = {
             Currently services electric and diesel buses `,
             
             location: {
-                center: [-122.40374, 37.78795],
-                zoom: 15.68,
-                pitch: 60.00,
-                bearing: 73.04
+                center: [-122.4240, 37.77528],
+                zoom: 13.00,
+                pitch: 0.00,
+                bearing: 0.00
             },
             onChapterEnter: [],
             onChapterExit: []
@@ -77,7 +77,7 @@ var config = {
         {
             id: 'three',
             title: 'History Pt.2',
-            image: 'images/historic6.jpg',
+            image: 'images/emb_free.jpg',
             description: `<strong>1963</strong>:<br> City planning department commissioned an architecture firm to create the Downtown Plan
             and recommend that Market be limited to buses and emergency vehicles. SF Muni streetcars were moved underground (Muni Metro) in addition to the construction of the BART system in the late 1960’s. <br>
             <strong>1968: Market Street Redevelopment Plan</strong> <br>
@@ -95,7 +95,45 @@ bearing: 43.44
             onChapterEnter: [],
             onChapterExit: []
         }
-        ,
+        , {
+            id: 'injuries',
+            title: 'Injuries',
+            description: `blah
+            `,
+            location: {
+                center: [-122.41718, 37.77659],
+zoom: 13.20,
+pitch: 0.00,
+bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'bikeped_col',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'bikeped_col',
+                opacity: 0
+            }]
+        }, {
+            id: 'kill',
+            title: 'Deaths',
+            description: `blah
+            `,
+            location: {
+                center: [-122.41718, 37.77659],
+                zoom: 13.20,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'bikeped_kill',
+                opacity: 1
+            }],
+            onChapterExit: [{
+                layer: 'bikeped_kill',
+                opacity: 0
+            }]
+        },
         {
             id: 'four',
             title: `What's Happening on Market Street?`,
@@ -114,32 +152,7 @@ bearing: 46.64
             },
             onChapterEnter: [],
             onChapterExit: []
-        },
-        {
-            id: 'five',
-            title: `A “Better Market Street”`,
-            image: 'images/cross_section.jpg',
-            description: `<stong>Began in January 2020</strong><br>
-            - 2-mile stretch of the street<br>
-            - Ride-sharing and private vehicles are prohibited from using the roadway <br>
-            - Reduce traffic and vehicle-related collisions<br>
-            - Most injury-collisions include pedestrians and cycle-related accidents<br>
-            - Muni buses, taxis, paratransit and commercial vehicles are permitted to used the roadway<br>
-            - Center lane will be reserved for Muni riders only<br>
-            - Outer lanes will be turned into open roadway for Muni buses, taxis and commercials vehicles<br>
-            - Commercial loading will only be allowed during off-peak hours<br>
-            
-            `,
-            location: {
-                center: [-122.40658, 37.78514],
-                zoom: 15.62,
-                pitch: 60.00,
-                bearing: 46.64
-            },
-            onChapterEnter: [],
-            onChapterExit: []
-        }
-        ,
+        }, 
         {
             id: 'six',
             title: `A “Better Market Street”`,
@@ -158,14 +171,89 @@ bearing: 46.64
             
             `,
             location: {
-                center: [-122.40026, 37.78883],
-                zoom: 15.62,
+               
+                center: [-122.41112, 37.77869],
+                zoom: 13.5,
                 pitch: 0.00,
-                bearing: -45.36
+                bearing: -43.43
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {layer: 'market',
+                opacity: 0
+            }, {
+                layer: 'carfree',
+                opacity: 0.4
+            },
+            {
+                layer: 'trafficmove',
+                opacity: 1
+            },
+            {
+                layer: 'turn-res',
+                opacity: 1
+            },
+            {
+                layer: 'oneway',
+                opacity: 1
+            },
+            {
+                layer: 'twoway',
+                opacity: 1
+            }
+            ],
+            onChapterExit: [{
+                layer: 'carfree',
+                opacity: 0
+            },
+            {
+                layer: 'trafficmove',
+                opacity: 0
+            },
+            {
+                layer: 'turn-res',
+                opacity: 0
+            },
+            {
+                layer: 'oneway',
+                opacity: 0
+            },
+            {
+                layer: 'twoway',
+                opacity: 0
+            }]
         },
+        {
+            id: 'five',
+            title: `A “Better Market Street”`,
+            image: 'images/cross_section.jpg',
+            description: `<stong>Began in January 2020</strong><br>
+            - 2-mile stretch of the street<br>
+            - Ride-sharing and private vehicles are prohibited from using the roadway <br>
+            - Reduce traffic and vehicle-related collisions<br>
+            - Most injury-collisions include pedestrians and cycle-related accidents<br>
+            - Muni buses, taxis, paratransit and commercial vehicles are permitted to used the roadway<br>
+            - Center lane will be reserved for Muni riders only<br>
+            - Outer lanes will be turned into open roadway for Muni buses, taxis and commercials vehicles<br>
+            - Commercial loading will only be allowed during off-peak hours<br>
+            
+            `,
+            location: {
+                center: [-122.4019, 37.789],
+                zoom: 18.18,
+                pitch: 60.00,
+                bearing: 46.64
+            },
+            onChapterEnter: [{
+                layer:'crosssection',
+                opacity:1
+            }],
+            onChapterExit: [{
+                layer:'crosssection',
+                opacity:0
+            }]
+        }
+        ,
+        
         {
             id: 'seven',
             title: `What's the Goal?`,
