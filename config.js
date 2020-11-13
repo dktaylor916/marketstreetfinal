@@ -95,7 +95,7 @@ var config = {
         {
             id: 'three',
             title: 'History Pt.2',
-            image: 'images/emb_free_comp2.jpg',
+            image: 'images/emb_free_comp3.jpg',
             description: `<strong>1963</strong>:<br>  the city planning department commissioned a Downtown Plan that limited Market St to only allow buses and emergency vehicles<br>
             <strong>1968: Market Street Redevelopment Plan</strong> <br>
             Put new life into the street as a center for Bay Area business, shopping and entertainment
@@ -181,7 +181,7 @@ bearing: 0.00
         {
             id: 'six',
             title: `A “Better Market Street”`,
-            image: 'images/plan_ee-level2.jpg',
+            image: 'images/plan_ee-level3.jpg',
             description: `- 2-miles of improved accessibility​<br>
 
            - Ride-sharing and private vehicles are prohibited <br> ​
@@ -246,7 +246,7 @@ bearing: 0.00
         {
             id: 'five',
             title: `A “Better Market Street”`,
-            image: 'images/cross_section2.JPG',
+            image: 'images/cross_section3.png',
             description: `- Center lane will be reserved for Muni riders only​ <br>
 
            -  Outer lanes will be turned into open roadway for Muni buses, taxis and commercials vehicles​<br>
@@ -278,7 +278,7 @@ bearing: 0.00
         {
             id: 'seven',
             title: `What's the Goal?`,
-        image:'images/rendering.jpg',
+        image:'images/rendering10.jpg',
             description: `<strong>Making good city streets starts with trust in people</strong><br>
             The success of a good city street depends on:<br>
             Urban space that functions well for traffic<br>
