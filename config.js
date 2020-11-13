@@ -96,7 +96,7 @@ var config = {
             id: 'three',
             title: 'History Pt.2',
             image: 'images/emb_free_comp3.jpg',
-            description: `<strong>1963</strong>:<br>  the city planning department commissioned a Downtown Plan that limited Market St to only allow buses and emergency vehicles<br>
+            description: `<strong>1963 </strong>:<br>  the city planning department commissioned a Downtown Plan that limited Market St to only allow buses and emergency vehicles<br>
             <strong>1968: Market Street Redevelopment Plan</strong> <br>
             Put new life into the street as a center for Bay Area business, shopping and entertainment
             SF residents voted for reconstruction and improvement of Market street after the completion of the double-decker subway​<br>
