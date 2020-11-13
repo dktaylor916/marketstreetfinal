@@ -246,7 +246,7 @@ bearing: 0.00
         {
             id: 'five',
             title: `A “Better Market Street”`,
-            image: 'images/cross_section2.jpg',
+            image: 'images/cross_section2.JPG',
             description: `- Center lane will be reserved for Muni riders only​ <br>
 
            -  Outer lanes will be turned into open roadway for Muni buses, taxis and commercials vehicles​<br>
