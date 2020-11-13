@@ -82,6 +82,12 @@
         .step img {
             width: 100%;
         }
+        #injuries.step img {
+            width: 50%;
+        }
+        #kill.step img {
+            width: 50%;
+        }
 
         @media (max-width: 750px) {
             #features {
@@ -126,9 +132,14 @@ function getLayerPaintType(layer) {
 
 function setLayerOpacity(layer) {
     var paintProps = getLayerPaintType(layer.layer);
+    if (paintProps != undefined){
     paintProps.forEach(function(prop) {
-        map.setPaintProperty(layer.layer, prop, layer.opacity);
-    });
+        map.setPaintProperty(layer.layer, prop, layer.opacity)
+        map.setPaintProperty('bikeped_col','heatmap-opacity',0);
+    })}
+    else{
+        map.setPaintProperty('bikeped_col','heatmap-opacity',.45)
+    };
 }
 
 var story = document.getElementById('story');

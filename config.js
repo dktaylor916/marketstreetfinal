@@ -1,5 +1,5 @@
 var config = {
-    style: 'mapbox://styles/dtaylorgoud/ckhex36sj13us19pexzq4v2h3',
+    style: 'mapbox://styles/dtaylorgoud/ckhg5vpo115q219mdg8wehf8z',
     accessToken: 'pk.eyJ1IjoiZHRheWxvcmdvdWQiLCJhIjoiY2tlbzA1OHltMjJyNjMwcGM2eHZsMGowaiJ9.jtxQ1bgoZL9_sacqiAlTsg',
     showMarkers: false,
     theme: 'light',
@@ -22,36 +22,54 @@ var config = {
             },
             onChapterEnter: [
                 {
+            
                    layer: 'marketstreet',
                    opacity: 1
-                }
+                },
+                
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+           
             ]
         },{
             id: 'second',
             title: 'Geographical Context',
             image:'images/transitcenter.jpg',
-            description: `- Northern terminus begins at the Ferry Building along the Embarcadero <br>
-            - Southern terminus extends into the Twin Peaks neighborhood <br>
-            -Passes through several major downtown districts:
+            description: `- Extends from the Ferry Building (blue dot) along the Embarcadero to the Twin Peaks neighborhood<br>
+            - Passes through several major downtown districts:
             <blockquote><strong>Civic Center</strong> (a business hub for SF and major public transit stop) <br>
             <strong>Castro District</strong> (thriving music, arts and culture neighborhood)<br>
-           <strong> SOMA</strong> (industrial district, two sports stadiums)
+           <strong> SOMA</strong> (industrial district, two sports stadiums)<br>
            <strong> Union Square</strong> (central shopping, hotel and theater district)</blockquote>
-            -Connects to the Salesforce Transit Center (regional transit hub)`        ,
+            - Connects to the Salesforce Transit Center (red circle)`        ,
             location: {
                 center: [-122.4240, 37.77528],
                 zoom: 13.00,
                 pitch: 0.00,
                 bearing: 0.00
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer:'trans-ferry',
+                    opacity:1
+                },
+                {
+                    layer:'neighborhoods',
+                    opacity:1
+
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer:'trans-ferry',
+                    opacity:0
+                },
+                {
+                    layer:'neighborhoods',
+                    opacity:0
+
+                }
+            ]
         },
         {
             id: 'other-identifier',
@@ -77,64 +95,26 @@ var config = {
         {
             id: 'three',
             title: 'History Pt.2',
-            image: 'images/emb_free.jpg',
-            description: `<strong>1963</strong>:<br> City planning department commissioned an architecture firm to create the Downtown Plan
-            and recommend that Market be limited to buses and emergency vehicles. SF Muni streetcars were moved underground (Muni Metro) in addition to the construction of the BART system in the late 1960’s. <br>
+            image: 'images/emb_free_comp2.jpg',
+            description: `<strong>1963</strong>:<br>  the city planning department commissioned a Downtown Plan that limited Market St to only allow buses and emergency vehicles<br>
             <strong>1968: Market Street Redevelopment Plan</strong> <br>
-            Put new life into the street as a center for Bay Area business, shopping and entertainment. 
-            SF residents passed Prop A – issued $24.5 million in bonds to pay for reconstruction and improvement of Market street after the completion of the double-decker subway.<br>
+            Put new life into the street as a center for Bay Area business, shopping and entertainment
+            SF residents voted for reconstruction and improvement of Market street after the completion of the double-decker subway​<br>
             <strong>1972: BART system opened</strong><br>
-            Six years of construction that tore up Market Street
             `,
             location: {
-                center: [-122.41220, 37.78057],
-zoom: 13.28,
-pitch: 10.50,
-bearing: 43.44
+                center: [-122.39826, 37.79534],
+                zoom: 16.08,
+                pitch: 60.00,
+                bearing: 101.85
             },
-            onChapterEnter: [],
+            onChapterEnter: [{
+                layer:'bikeped_kill',
+                opacity:0
+            }],
             onChapterExit: []
         }
-        , {
-            id: 'injuries',
-            title: 'Injuries',
-            description: `blah
-            `,
-            location: {
-                center: [-122.41718, 37.77659],
-zoom: 13.20,
-pitch: 0.00,
-bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'bikeped_col',
-                opacity: 1
-            }],
-            onChapterExit: [{
-                layer: 'bikeped_col',
-                opacity: 0
-            }]
-        }, {
-            id: 'kill',
-            title: 'Deaths',
-            description: `blah
-            `,
-            location: {
-                center: [-122.41718, 37.77659],
-                zoom: 13.20,
-                pitch: 0.00,
-                bearing: 0.00
-            },
-            onChapterEnter: [{
-                layer: 'bikeped_kill',
-                opacity: 1
-            }],
-            onChapterExit: [{
-                layer: 'bikeped_kill',
-                opacity: 0
-            }]
-        },
-        {
+        ,{
             id: 'four',
             title: `What's Happening on Market Street?`,
             image: 'images/birdseye.jpg',
@@ -150,24 +130,65 @@ zoom: 14.34,
 pitch: 60.00,
 bearing: 46.64
             },
-            onChapterEnter: [],
+            onChapterEnter: [{
+                layer:'market',
+                opacity:1
+            }],
             onChapterExit: []
-        }, 
+        }, {
+            id: 'injuries',
+            title: 'Injuries',
+            image:'images/densitycoll_legenda.png',
+            description: `Market Street is home to half of the top 10 intersections for pedestrian and bicycle collisions. In fact, each year since 2014 the area-averaged over 100 injury collisions per year -- 75 percent of them involving people walking or biking. This heatmap shows densities of injuries for pedestrians and cyclists from 2006 - 2017
+            `,
+            location: {
+                center: [-122.41718, 37.77659],
+zoom: 13.20,
+pitch: 0.00,
+bearing: 0.00
+            },
+            onChapterEnter: [
+                {
+                    layer: 'bikeped_col',
+                    opacity:1
+                }
+            ],
+            onChapterExit: []
+        }, {
+            id: 'kill',
+            title: 'Deaths',
+            image: 'images/deaths_legenda2.png',
+            description: `Market Street is also one of the deadliest streets in the Bay Area. Here all deaths are marked for pedestrians and cyclists from 2006 - 2017. It was clear that a change needed to be made.
+            `,
+            location: {
+                center: [-122.41718, 37.77659],
+                zoom: 13.20,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [{
+                layer: 'bikeped_kill',
+                opacity: 1
+            },
+        {layer:'market',
+    opacity:0}],
+            onChapterExit: [{
+                layer: 'bikeped_kill',
+                opacity: 0
+            }]
+        },
+        
         {
             id: 'six',
             title: `A “Better Market Street”`,
-            image: 'images/plan_ee-level.jpg',
-            description: `For cyclists, there will be wider bike lanes and the lanes will be at sidewalk level and made of a material that makes them easily identifiable as a bike lane<br>
-            4-foot buffer that will separate it from the roadway<br>
-            The car-free space that encourage people to walk, bike and take transit<br>
-            Resulted in 6-12% travel time savings for transit routes on Market Street <br>
-            Help the city achieve Vision Zero goals <br>
-            Eliminate traffic deaths on one of the city’s busiest corridors<br>
-            Cars will be allowed to cross Market Street on most streets <br>
-            Loading zones for commercial vehicles and ride-sharing services will be added to a number of cross streets<br>
-            Curbside bus stops at each block, with center transit boarding islands <br>
-            Traffic effects on other streets are negligible
+            image: 'images/plan_ee-level2.jpg',
+            description: `- 2-miles of improved accessibility​<br>
+
+           - Ride-sharing and private vehicles are prohibited <br> ​
             
+            - Muni buses, taxis, paratransit and commercial vehicles are permitted ​<br>
+            
+            - Change the current text on this slide to the above
             
             `,
             location: {
@@ -225,16 +246,16 @@ bearing: 46.64
         {
             id: 'five',
             title: `A “Better Market Street”`,
-            image: 'images/cross_section.jpg',
-            description: `<stong>Began in January 2020</strong><br>
-            - 2-mile stretch of the street<br>
-            - Ride-sharing and private vehicles are prohibited from using the roadway <br>
-            - Reduce traffic and vehicle-related collisions<br>
-            - Most injury-collisions include pedestrians and cycle-related accidents<br>
-            - Muni buses, taxis, paratransit and commercial vehicles are permitted to used the roadway<br>
-            - Center lane will be reserved for Muni riders only<br>
-            - Outer lanes will be turned into open roadway for Muni buses, taxis and commercials vehicles<br>
-            - Commercial loading will only be allowed during off-peak hours<br>
+            image: 'images/cross_section2.jpg',
+            description: `- Center lane will be reserved for Muni riders only​ <br>
+
+           -  Outer lanes will be turned into open roadway for Muni buses, taxis and commercials vehicles​<br>
+            
+            - Commercial loading will only be allowed during off-peak hours​
+            
+            - For cyclists, there will be wider bike lanes and the lanes will be at sidewalk level and made of a material that makes them easily identifiable as a bike lane​<br>
+            
+            4-foot buffer that will separate it from the roadway​
             
             `,
             location: {
@@ -257,7 +278,7 @@ bearing: 46.64
         {
             id: 'seven',
             title: `What's the Goal?`,
-        
+        image:'images/rendering.jpg',
             description: `<strong>Making good city streets starts with trust in people</strong><br>
             The success of a good city street depends on:<br>
             Urban space that functions well for traffic<br>
