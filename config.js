@@ -1,5 +1,5 @@
 var config = {
-    style: 'mapbox://styles/dtaylorgoud/ckhg5vpo115q219mdg8wehf8z',
+    style: 'mapbox://styles/dtaylorgoud/ckhkd45dg4gzv19otkfz325v1',
     accessToken: 'pk.eyJ1IjoiZHRheWxvcmdvdWQiLCJhIjoiY2tlbzA1OHltMjJyNjMwcGM2eHZsMGowaiJ9.jtxQ1bgoZL9_sacqiAlTsg',
     showMarkers: false,
     theme: 'light',
@@ -294,8 +294,44 @@ bearing: 0.00
                 pitch: 0.00,
                 bearing: 0.00
             },
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer:'market',
+                    opacity:1
+                }
+            ],
+            onChapterExit: [  {
+                layer:'market',
+                opacity:0
+            }]
+        },
+        {
+            id: 'eight',
+            title: `Workshop Functional Ambience`,
+            description: `<strong>6th Street & Market - 7th Street & Market</strong><br>
+            This section of Market Street is the main focus for the Better Market Street Plan. For this workshop you will create a functional ambience spider graph for the current design of the street. After completing that you will look over the new planned design and create an upgraded spider chart. What parts of functional ambience have been improved? What still needs work? Can you see any Dutch inspired designs? What would an interseciton like this look like in the Netherlands?<br>
+            
+            <strong>Resources:</strong><br>
+            <a ref='https://www.google.com/maps/place/Market+St+%26+6th+St,+San+Francisco,+CA+94103,+USA/@37.7812331,-122.4120492,258m/data=!3m1!1e3!4m5!3m4!1s0x808580850397161b:0x1f5dcf6b2af5a835!8m2!3d37.7822109!4d-122.4103562?hl=en'>Google Maps Current Street</a><br>
+            <a ref='https://storymaps.arcgis.com/stories/549e254bccb6413b953d1173eb1a63e7'>Better Street Plan View Current VS Plan</a><br>
+            <a ref='https://storymaps.arcgis.com/stories/549e254bccb6413b953d1173eb1a63e7'>Rendered Image for Better Market Street</a>`
+            
+            
+            ,
+            location: {
+                center: [-122.41129, 37.78145],
+                zoom: 16.15,
+                pitch: 0.00,
+                bearing: 1.41
+            },
+            onChapterEnter: [{
+                layer:'market7th',
+                opacity:.6
+            }],
+            onChapterExit: [{
+                layer:'market7th',
+                opacity:0
+            }]
         }
     ]
 };
