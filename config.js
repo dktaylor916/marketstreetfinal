@@ -96,7 +96,7 @@ var config = {
             id: 'three',
             title: 'History Pt.2',
             image: 'images/emb_free_comp3.jpg',
-            description: `<strong>1963 </strong>:<br>  the city planning department commissioned a Downtown Plan that limited Market St to only allow buses and emergency vehicles<br>
+            description: `<strong>1963: Downtown Plan </strong>:<br>  the city planning department commissioned a Downtown Plan that limited Market Street to only allow buses and emergency vehicles<br>
             <strong>1968: Market Street Redevelopment Plan</strong> <br>
             Put new life into the street as a center for Bay Area business, shopping and entertainment
             SF residents voted for reconstruction and improvement of Market street after the completion of the double-decker subway​<br>
@@ -138,7 +138,7 @@ bearing: 46.64
         }, {
             id: 'injuries',
             title: 'Injuries',
-            image:'images/densitycoll_legenda.png',
+            image:'images/densitycoll_legenda2.png',
             description: `Market Street is home to half of the top 10 intersections for pedestrian and bicycle collisions. In fact, each year since 2014 the area-averaged over 100 injury collisions per year -- 75 percent of them involving people walking or biking. This heatmap shows densities of injuries for pedestrians and cyclists from 2006 - 2017
             `,
             location: {
@@ -157,7 +157,7 @@ bearing: 0.00
         }, {
             id: 'kill',
             title: 'Deaths',
-            image: 'images/deaths_legenda2.png',
+            image: 'images/deaths_legenda3.png',
             description: `Market Street is also one of the deadliest streets in the Bay Area. Here all deaths are marked for pedestrians and cyclists from 2006 - 2017. It was clear that a change needed to be made.
             `,
             location: {
