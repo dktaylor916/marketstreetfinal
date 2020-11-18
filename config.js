@@ -315,7 +315,7 @@ bearing: 0.00
             <a href='https://www.google.com/maps/place/Market+St+%26+6th+St,+San+Francisco,+CA+94103,+USA/@37.7812331,-122.4120492,258m/data=!3m1!1e3!4m5!3m4!1s0x808580850397161b:0x1f5dcf6b2af5a835!8m2!3d37.7822109!4d-122.4103562?hl=en'target="_blank">Google Maps Current Street</a><br>
             <a class=jsx-1295323620 image-container fill-parent></a>
 
-            <a href='https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=5c7e7f18-280a-11eb-83c8-ebb5d6f907df' target="_blank">Current Street Plan VS Better Market Street Plan</a><br>
+            <a href='https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2a952dc2-298a-11eb-83c8-ebb5d6f907df' target="_blank">Current Street Plan VS Better Market Street Plan</a><br>
             <a href='https://i.imgur.com/DrELtIS.jpg'target="_blank">Rendered Image for Better Market Street</a>`
             
             
