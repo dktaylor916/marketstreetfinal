@@ -6,7 +6,7 @@ var config = {
     alignment: 'left',
     title: 'Market Street: San Francisco, California',
     subtitle: 'A brief walk through the history of Market Street',
-    byline: 'By Michelle Wray and Derek Taylor',
+    byline: 'By Derek Taylor',
     footer: 'Source: SF MTA',
     chapters: [
         {
